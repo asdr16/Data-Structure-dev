@@ -1,0 +1,11 @@
+(Infix): A * (B + C)
+
+Adım Okunan Karakter Stack (Yığın/Depo) Çıkış (Postfix) Açıklama
+1 A (Boş) A Harf/Sayı doğrudan çıkışa gider.
+2 * * A Operatör yığına (stack) alınır.
+3 ( * , ( A Sol parantez en yüksek öncelikle yığına girer.
+4 B * , ( A B Harf doğrudan çıkışa gider.
+5 + * , ( , + A B +, parantezden sonra geldiği için yığına eklenir.
+6 C * , ( , + A B C Harf doğrudan çıkışa gider.
+7 ) * A B C + Sağ parantez geldi! ( görene kadar yığındakileri boşalt.
+8 Bitti (Boş) A B C + *
